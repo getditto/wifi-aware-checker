@@ -12,3 +12,5 @@ _This means that you may have a device like a OnePlus 5T running Android 10 but 
 Run this app and quickly find out if WiFi Aware is available on your device. 
 
 WiFi Aware is an upcoming supported transport at [Ditto](https://www.ditto.live)
+
+![WiFi Aware Checker](https://media.giphy.com/media/KZYlo0pSCUEsohrTtC/giphy.gif)
