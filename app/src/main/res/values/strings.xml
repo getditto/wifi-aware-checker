@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WiFi Aware Checker</string>
+    <string name="availability_icon_description">Availability Icon</string>
 </resources>
