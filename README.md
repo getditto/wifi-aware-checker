@@ -1,5 +1,10 @@
 # WiFi Aware Checker Android App
 
+<a href="https://www.ditto.live">
+<img src="https://www.ditto.live/assets/img/logos/logo.png" width=30 />
+<span style="margin-left:8px; font-size:32px; font-weight:600">Ditto</span>
+</a>
+
 This app quickly checks if your Android device supports WiFi Aware. Learn more about WiFi Aware here:
 [https://developer.android.com/guide/topics/connectivity/wifi-aware](https://developer.android.com/guide/topics/connectivity/wifi-aware).
 
@@ -13,4 +18,10 @@ _This means that you may have a device like a OnePlus 5T running Android 10 but 
 
 Run this app and quickly find out if WiFi Aware is available on your device. 
 WiFi Aware is an upcoming supported transport at [Ditto](https://www.ditto.live)
+
+## Running this app
+
+1. `git clone` this repository
+2. Run this project on your Android 8.0 or higher device with Android studio! 
+
 ![WiFi Aware Checker](https://media.giphy.com/media/kfXxeX3zidS1yzKVgC/giphy.gif)
