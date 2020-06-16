@@ -11,7 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.example.wifiawarechecker.R
+import live.ditto.wifiawarechecker.R
 
 
 class MainActivity : AppCompatActivity() {
