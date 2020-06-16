@@ -1,8 +1,14 @@
 # WiFi Aware Checker Android App
 
 <a href="https://www.ditto.live">
-<img src="https://www.ditto.live/assets/img/logos/logo.png" width=30 />
-<span style="margin-left:8px; font-size:32px; font-weight:600">Ditto</span>
+<img src="https://www.ditto.live/assets/img/logos/logo.png" width=30 style="float:left; margin-right: 8px" />
+<h1>Ditto</h1>
+</a>
+
+## [Download this app on Google Play Store](https://play.google.com/store/apps/details?id=live.ditto.wifiawarechecker)
+
+<a href="https://play.google.com/store/apps/details?id=live.ditto.wifiawarechecker">
+    <img src="https://raw.githubusercontent.com/steverichey/google-play-badge-svg/master/img/en_get.svg" height=60>
 </a>
 
 This app quickly checks if your Android device supports WiFi Aware. Learn more about WiFi Aware here:
