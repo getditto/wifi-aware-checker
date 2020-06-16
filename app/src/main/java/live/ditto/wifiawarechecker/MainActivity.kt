@@ -1,4 +1,4 @@
-package com.example.wifiawarechecker
+package live.ditto.wifiawarechecker
 
 import android.content.Intent
 import android.content.Intent.ACTION_VIEW
@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.wifiawarechecker.R
 
 
 class MainActivity : AppCompatActivity() {
@@ -42,11 +43,15 @@ class MainActivity : AppCompatActivity() {
         val hasSystemFeature = packageManager.hasSystemFeature(PackageManager.FEATURE_WIFI_AWARE)
         if (hasSystemFeature) {
             hasFeatureTextView.text = "WiFi Aware Available"
-            hasFeatureTextView.setTextColor(ContextCompat.getColor(this, R.color.colorAvailable));
+            hasFeatureTextView.setTextColor(ContextCompat.getColor(this,
+                R.color.colorAvailable
+            ));
             iconImageView.setImageDrawable(getDrawable(R.drawable.ic_wifi_yes))
         } else {
             hasFeatureTextView.text = "WiFi Aware Unavailable"
-            hasFeatureTextView.setTextColor(ContextCompat.getColor(this, R.color.colorUnavailable));
+            hasFeatureTextView.setTextColor(ContextCompat.getColor(this,
+                R.color.colorUnavailable
+            ));
             iconImageView.setImageDrawable(getDrawable(R.drawable.ic_wifi_no))
         }
     }
