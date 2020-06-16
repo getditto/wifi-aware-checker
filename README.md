@@ -1,9 +1,6 @@
 # WiFi Aware Checker Android App
 
-<a href="https://www.ditto.live">
-<img src="https://www.ditto.live/assets/img/logos/logo.png" width=30 style="float:left; margin-right: 8px" />
-<h1>Ditto</h1>
-</a>
+Brought to you by [Ditto - Sync without Internet](https://www.ditto.live).
 
 ## [Download this app on Google Play Store](https://play.google.com/store/apps/details?id=live.ditto.wifiawarechecker)
 
