@@ -1,4 +1,4 @@
-package com.example.wifiawarechecker
+package live.ditto.wifiawarechecker
 
 import org.junit.Test
 
