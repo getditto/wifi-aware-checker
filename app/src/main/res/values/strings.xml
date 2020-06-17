@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">WiFi Aware Checker</string>
     <string name="availability_icon_description">Availability Icon</string>
+    <string name="wifi_aware_unavailable_text">WiFi Aware Unavailable</string>
+    <string name="wifi_aware_available_text">WiFi Aware Available</string>
+    <string name="share_dialog_message_text">We\'re about to share the status of WiFi Aware anonymously with a public directory for Android developers. This is to help them make sure that they know your device can or cannot support WiFi Aware. Only your device type build, manufacturer and status of WiFi Aware is shared. No personal information is uploaded.</string>
+    <string name="share_dialog_dialog_title_text">Share your results with other Android developers?</string>
 </resources>

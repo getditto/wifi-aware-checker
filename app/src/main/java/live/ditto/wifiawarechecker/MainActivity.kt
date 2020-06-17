@@ -1,5 +1,6 @@
 package live.ditto.wifiawarechecker
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.content.Intent.ACTION_VIEW
 import android.content.pm.PackageManager
@@ -11,8 +12,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import live.ditto.wifiawarechecker.R
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,17 +41,37 @@ class MainActivity : AppCompatActivity() {
 
         val hasSystemFeature = packageManager.hasSystemFeature(PackageManager.FEATURE_WIFI_AWARE)
         if (hasSystemFeature) {
-            hasFeatureTextView.text = "WiFi Aware Available"
+            hasFeatureTextView.text = getString(R.string.wifi_aware_available_text)
             hasFeatureTextView.setTextColor(ContextCompat.getColor(this,
                 R.color.colorAvailable
             ));
             iconImageView.setImageDrawable(getDrawable(R.drawable.ic_wifi_yes))
         } else {
-            hasFeatureTextView.text = "WiFi Aware Unavailable"
+            hasFeatureTextView.text = getString(R.string.wifi_aware_unavailable_text)
             hasFeatureTextView.setTextColor(ContextCompat.getColor(this,
                 R.color.colorUnavailable
             ));
             iconImageView.setImageDrawable(getDrawable(R.drawable.ic_wifi_no))
+        }
+
+        val shareResultsButton: Button = findViewById(R.id.share_results_button)
+        shareResultsButton.setOnClickListener {
+            val dialogBuilder = AlertDialog.Builder(this)
+            dialogBuilder.setTitle(getString(R.string.share_dialog_dialog_title_text))
+            dialogBuilder.setMessage(getString(R.string.share_dialog_message_text))
+            dialogBuilder.setNeutralButton("Privacy Policy") { dialog, which ->
+                val uri: Uri = Uri.parse("https://www.ditto.live/support/privacy-policy")
+                val browserIntent = Intent(ACTION_VIEW)
+                browserIntent.data = uri;
+                ContextCompat.startActivity(this, browserIntent, null)
+            }
+            dialogBuilder.setNegativeButton("No, Cancel") { dialog, which ->
+
+            }
+            dialogBuilder.setPositiveButton("Yes, share") { dialog, which ->
+
+            }
+            dialogBuilder.show()
         }
     }
 
