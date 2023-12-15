@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">WiFi Aware Checker</string>
     <string name="availability_icon_description">Availability Icon</string>
+    <string name="the_device_has_wifi_aware">The device has WiFi Aware</string>
+    <string name="android_version_version_release">Android Version: %1$s | Version Release %2$s</string>
+    <string name="wifi_aware_currently_available">WiFi Aware currently available</string>
+    <string name="wifi_aware_currently_unavailable">WiFi Aware currently unavailable</string>
+    <string name="please_check_if_wifi_and_location_are_enabled_and_try_again">Please check if WiFi and Location are enabled and try again.</string>
+    <string name="the_device_does_not_have_wifi_aware">The device does not have WiFi Aware</string>
 </resources>
