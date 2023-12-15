@@ -6,23 +6,33 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnRefreshListener {
+
+    private lateinit var hasFeatureTextView: TextView
+    private lateinit var featureAvailableTextView: TextView
+    private lateinit var unavailabilityTipsTextView: TextView
+    private lateinit var iconImageView: ImageView
+    private lateinit var swipeRefreshLayout: SwipeRefreshLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val hasFeatureTextView: TextView = findViewById(R.id.has_feature_text_view)
-        val featureAvailableTextView: TextView = findViewById(R.id.feature_available_text_view)
-        val unavailabilityTipsTextView: TextView = findViewById(R.id.unavailable_tips_text_view)
-        val iconImageView: ImageView = findViewById(R.id.icon_image_view)
+        hasFeatureTextView = findViewById(R.id.has_feature_text_view)
+        unavailabilityTipsTextView = findViewById(R.id.unavailable_tips_text_view)
+        featureAvailableTextView = findViewById(R.id.feature_available_text_view)
+        iconImageView = findViewById(R.id.icon_image_view)
+
         val modelAndManufacturerTextView: TextView =
             findViewById(R.id.model_and_manufacturer_text_view)
         val androidVersionTextView: TextView = findViewById(R.id.android_version_text_view)
@@ -42,6 +52,13 @@ class MainActivity : AppCompatActivity() {
             ContextCompat.startActivity(this, browserIntent, null)
         }
 
+        swipeRefreshLayout = findViewById(R.id.swiperefresh);
+        swipeRefreshLayout.setOnRefreshListener(this)
+
+        checkWifiAware()
+    }
+
+    private fun checkWifiAware() {
         val hasSystemFeature = packageManager.hasSystemFeature(PackageManager.FEATURE_WIFI_AWARE)
         if (hasSystemFeature) {
             hasFeatureTextView.text = getString(R.string.the_device_has_wifi_aware)
@@ -100,5 +117,10 @@ class MainActivity : AppCompatActivity() {
         } else {
             Character.toUpperCase(first).toString() + s.substring(1)
         }
+    }
+
+    override fun onRefresh() {
+        checkWifiAware()
+        Handler().postDelayed({ swipeRefreshLayout.isRefreshing = false }, 300)
     }
 }
