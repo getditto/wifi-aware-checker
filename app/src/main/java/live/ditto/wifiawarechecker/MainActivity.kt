@@ -11,7 +11,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import live.ditto.wifiawarechecker.R
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val hasFeatureTextView: TextView = findViewById(R.id.has_feature_text_view)
+        val featureAvailableTextView: TextView = findViewById(R.id.feature_available_text_view)
+        val unavailabilityTipsTextView: TextView = findViewById(R.id.unavailable_tips_text_view)
         val iconImageView: ImageView = findViewById(R.id.icon_image_view)
         val modelAndManufacturerTextView: TextView =
             findViewById(R.id.model_and_manufacturer_text_view)
@@ -42,17 +43,33 @@ class MainActivity : AppCompatActivity() {
 
         val hasSystemFeature = packageManager.hasSystemFeature(PackageManager.FEATURE_WIFI_AWARE)
         if (hasSystemFeature) {
-            hasFeatureTextView.text = "WiFi Aware Available"
+            hasFeatureTextView.text = "The device has WiFi Aware"
             hasFeatureTextView.setTextColor(ContextCompat.getColor(this,
                 R.color.colorAvailable
             ));
-            iconImageView.setImageDrawable(getDrawable(R.drawable.ic_wifi_yes))
         } else {
-            hasFeatureTextView.text = "WiFi Aware Unavailable"
+            hasFeatureTextView.text = "The device does not have WiFi Aware"
             hasFeatureTextView.setTextColor(ContextCompat.getColor(this,
                 R.color.colorUnavailable
             ));
+        }
+
+        val wifiAwareManager = getSystemService(WIFI_AWARE_SERVICE) as android.net.wifi.aware.WifiAwareManager
+        if (wifiAwareManager.isAvailable) {
+            featureAvailableTextView.text = "WiFi Aware currently available"
+            featureAvailableTextView.setTextColor(ContextCompat.getColor(this,
+                R.color.colorAvailable
+            ));
+            iconImageView.setImageDrawable(getDrawable(R.drawable.ic_wifi_yes))
+            unavailabilityTipsTextView.visibility = TextView.GONE
+        } else {
+            featureAvailableTextView.text = "WiFi Aware currently unavailable"
+            featureAvailableTextView.setTextColor(ContextCompat.getColor(this,
+                R.color.colorUnavailable
+            ));
             iconImageView.setImageDrawable(getDrawable(R.drawable.ic_wifi_no))
+            unavailabilityTipsTextView.visibility = TextView.VISIBLE
+            unavailabilityTipsTextView.text = "Please check if WiFi and Location are enabled and try again."
         }
     }
 
