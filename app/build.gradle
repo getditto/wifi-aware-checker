@@ -3,12 +3,12 @@ apply plugin: 'kotlin-android'
 
 android {
     namespace "live.ditto.wifiawarechecker"
-    compileSdkVersion 34
 
     defaultConfig {
         applicationId "live.ditto.wifiawarechecker"
         minSdkVersion 26
-        targetSdkVersion 29
+        targetSdkVersion 34
+        compileSdk 34
         versionCode 1
         versionName "1.0"
         vectorDrawables.useSupportLibrary = true
