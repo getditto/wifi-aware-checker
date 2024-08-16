@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">WiFi Aware Checker</string>
     <string name="availability_icon_description">Availability Icon</string>
+    <string name="button_learn_more">Learn more about WiFi Aware</string>
+    <string name="label_android_version">Android Version: %1$s | Version Release %2$s</string>
+    <string name="label_wifi_aware_available">WiFi Aware Available</string>
+    <string name="label_wifi_aware_unavailable">WiFi Aware Unavailable</string>
 </resources>

@@ -51,7 +51,7 @@
 
     <Button
         android:id="@+id/learn_more_button"
-        android:text="Learn more about WiFi Aware"
+        android:text="@string/button_learn_more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
