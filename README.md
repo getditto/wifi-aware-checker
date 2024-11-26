@@ -28,3 +28,7 @@ WiFi Aware is an upcoming supported transport at [Ditto](https://www.ditto.live)
 2. Run this project on your Android 8.0 or higher device with Android studio! 
 
 ![WiFi Aware Checker](https://media.giphy.com/media/kfXxeX3zidS1yzKVgC/giphy.gif)
+
+## Support
+
+If you run into any issues with this app, please contact Ditto Support (<support@ditto.live>)
