@@ -1,6 +1,6 @@
 # WiFi Aware Checker Android App
 
-Brought to you by [Ditto - Sync without Internet](https://www.ditto.live).
+Brought to you by [Ditto - Sync without Internet](https://www.ditto.com).
 
 ## [Download this app on Google Play Store](https://play.google.com/store/apps/details?id=live.ditto.wifiawarechecker)
 
@@ -20,7 +20,7 @@ WiFi Aware is similar to Apple Wireless Direct, which is famously used in AirDro
 _This means that you may have a device like a OnePlus 5T running Android 10 but WiFi Aware is still unavailable_.
 
 Run this app and quickly find out if WiFi Aware is available on your device. 
-WiFi Aware is an upcoming supported transport at [Ditto](https://www.ditto.live)
+WiFi Aware is a supported peer-to-peer transport in [Ditto](https://www.ditto.com)
 
 ## Running this app
 
@@ -31,4 +31,4 @@ WiFi Aware is an upcoming supported transport at [Ditto](https://www.ditto.live)
 
 ## Support
 
-If you run into any issues with this app, please contact Ditto Support (<support@ditto.live>)
+If you run into any issues with this app, please contact Ditto Support (<support@ditto.com>)
